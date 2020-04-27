@@ -5,10 +5,10 @@ node 'master.puppet.vm' {
 }
 
 node /^web/ {
-  include role:pp_server
+  include role::pp_server
 }
 
 node /^db/ {
-  include role:db_server
+  include role::db_server
 }
 
