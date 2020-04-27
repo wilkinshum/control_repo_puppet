@@ -5,7 +5,7 @@ class minecraft (
     file { $install_dir:
         ensure => directory,
     }
-    file {"$(install_dir)/server.jar":
+    file {"${install_dir}/server.jar":
         ensure => file,
         source => $url,
         before => Service['minecraft'],
@@ -13,7 +13,7 @@ class minecraft (
     package {'java':
         ensure => present,
     }
-    file {"$(install_dir)/eula.txt":
+    file {"${install_dir}/eula.txt":
         ensure => file,
         content => 'eula=true',
     }
@@ -26,6 +26,6 @@ class minecraft (
     service {'minecraft':
         ensure => running,
         enable => true,
-        require => [Package['java'],File["$(install_dir)/eula.txt"],File['/etc/systemd/system/minecraft.service']],
+        require => [Package['java'],File["${install_dir}/eula.txt"],File['/etc/systemd/system/minecraft.service']],
     }
 }
