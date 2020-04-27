@@ -4,7 +4,7 @@ class minecraft {
     }
     file {'/opt/minecraft/server.jar':
         ensure => file,
-        source => 'puppet:///modules/minecraft/server.jar',
+        source => 'http://s3.amazonaws.com/MinecraftDownload/launcher/minecraft_server.jar',
     }
     package {'java':
         ensure => present,
