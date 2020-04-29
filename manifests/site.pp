@@ -6,7 +6,7 @@ node 'master.puppet.vm' {
     ensure => file,
     content => "Welcome to ${fqdn}\n",
   }
-  include role::master
+  
 }
 
 node 'minetest.puppet.vm' {
