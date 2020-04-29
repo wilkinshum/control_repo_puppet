@@ -1,5 +1,5 @@
 calss profile::r10k {
-        class {'r10k":
+        class {'r10k':
             remote => 'https://github.com/wilkinshum/control_repo_puppet',
         }
         class {'r10K::webhook::config':
