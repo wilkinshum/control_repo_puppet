@@ -11,4 +11,4 @@ class profile::r10k {
             group   => 'root',
         }
 }
-1
+
