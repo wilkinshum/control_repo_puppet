@@ -4,7 +4,7 @@ class profile::ngrok {
   }
 
   ngrok::tunnel { 'webhook':
-    proto => 'tcp',
+    proto => 'http',
     addr  => '8088',
   }
 }
